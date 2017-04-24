@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import Form from './form';
 //List//////////////////
-let dataList = [
+var dataList = [
     {
         name: "Tire",
         amount: 5426
@@ -16,10 +16,12 @@ let dataList = [
     }
 ]
 
-class List extends Component {
+class List extends React.Component {
     render() {
+//does not function
+        
 
-        var newlist = dataList.map(item => <li>
+        var newlist = dataList.map(item => <li key={item.name}>
             {item.name}
             {item.amount}</li>)
 
