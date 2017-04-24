@@ -6,6 +6,7 @@ class Form extends React.Component {
 
 
 
+
     render() {
         return (
             <div>
@@ -17,7 +18,7 @@ class Form extends React.Component {
                         Amount:
                         <input name="amount" onChange={this.props.handleChange} type="text" value={this.props.amount}/>
                     </label>
-                    <input type="submit" value="Submit"/>
+                    <input type="button" onClick={this.props.addItem}  value="Submit"/>
                 </form>
             </div>
         );
